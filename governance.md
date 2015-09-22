@@ -4,7 +4,7 @@
 
 - *leader*: an elected individual who guides the team.
 - *contributors*: active contributors to the project, those having more than
-  5 PRs merged in the last year.
+  x PRs merged (counting a maximum of one per month) in the last y years.
 - *trustees*: a group elected by the *contributors* that provide
   strategic feedback.
 
@@ -53,4 +53,17 @@ to call for an election. In exceptional circumstances, the *trustees* may, on un
 
 If a *trustee* retires, a new *trustee* shall be elected by the *contributors*.
 
-The *contributors* may, in exceptional circumstances, offer a vote of no confidence in one or more *trustees*.  This must be proposed and seconded.  There must be a two thirds majority vote of the *contributors* to depose a *trustee*.
+The *contributors* may, in exceptional circumstances, offer a vote of
+no confidence in one or more *trustees*.  This must be proposed and
+seconded.  There must be a two thirds majority vote of the
+*contributors* to depose a *trustee*.
+
+## Elections
+
+*Community* elections are held by closed ballot.  The vote of each
+contributor is weighted by:
+
+ - `max(sqrt(nr_years_active_contribution), sqrt(5))`
+
+Years of active contribution are defined as those years in which x PRs
+have been merged (counting a maximum of one per month).
